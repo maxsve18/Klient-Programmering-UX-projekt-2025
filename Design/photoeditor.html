@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,20 @@
 <main class="container">
 
     <section class="left-panel">
-        <h2>Vänster panel</h2>
-        <div class="picture-preview-box">bild</div>
-        <button class="crop-button">crop</button>
+        <div class="picture-preview-box">
+            <img src="../Assets/image.png" alt="Image preview">
+        </div>
+
+        <button class="crop">
+            <img id="crop-icon" src="../Assets/crop.png" alt="Crop Icon"> Crop
+        </button>
+
+        <div class="file-options">
+            <label><input type="checkbox">Select All</label>
+            <button class="show-as">Show as</button>
+        </div>
+
         <div class="file-manager-box">
-            <div class="file-options">
-                <label><input type="checkbox">Select All</label>
-                <button class="show-as">Show as</button>
-            </div>
             <ul class="file-list">
                 <li><label><input type="checkbox">fil1</label></li>
                 <li><label><input type="checkbox">fil2</label></li>
@@ -32,18 +39,91 @@
                 <button>ADD</button>
             </div>
         </div>
+
+        <img src="../Assets/slide.png" alt="scrollbar">
     </section>
 
     <section class="right-panel">
-        <h2>Höger panel</h2>
         <div class="tools">
             <h3>Resample</h3>
             <img src="../Assets/info.png" alt="hover-info">
-            <div></div>
+            <div class="tool-box"> Image dimensions
+                <form action="#">
+                    <label for="width">W</label>
+                    <input type="text" id="width" name="width">
+                    <label for="height">H</label>
+                    <input type="text" id="height" name="height">
+                </form>
+            </div>
+            <div class="export">
+                <h3>Export as</h3>
+                <button class="JPEG-format">JPEG</button>
+                <button class="PNG-format">PNG</button>
+                <button class="PDF-format">PDF</button>
+                <button class="TIFF-format">TIFF</button>
+                <button class="RAW-format">RAW</button>
+            </div>
+            <div class="resize">
+                <h3>Resize</h3>
+                <img src="../Assets/info.png" alt="hover-info">
+
+                <select id="resize-drop" name="resize-drop">
+                    <option value="none">None</option>
+                    <option value="value-1">value-1</option>
+                    <option value="value-2">value-2</option>
+                    <option value="value-3">value-3</option>
+                    <option value="value-4">value-4</option>
+                </select>
+            </div>
+            <div class="rotate">
+                <h3>Rotate</h3>
+                <img src="../Assets/rotate.png" alt="rotate" class="flip-icon">
+                <button class="0deg">0&deg;</button>
+                <button class="90deg">90&deg;</button>
+                <button class="180deg">180&deg;</button>
+                <button class="270deg">270&deg;</button>
+                <br>
+                <img src="../Assets/rotate.png" alt="rotate">
+                <button class="0deg">0&deg;</button>
+                <button class="-90deg">-90&deg;</button>
+                <button class="-180deg">-180&deg;</button>
+                <button class="-270deg">-270&deg;</button>
+            </div>
+            <div class="flip">
+                <h3>Flip</h3>
+                <img src="../Assets/flip.png" alt="flip horizontally">
+                <button class="horizontally">Horizontally</button>
+                <img src="../Assets/flip.png" alt="flip vertically" class="flip-vert">
+                <button class="vertically">Vertically</button>
+            </div>
+            <div class="contrast">
+                <h3>Contrast</h3>
+                <img src="../Assets/contrast.png" alt="contrast">
+                <input type="text" id="value" name="contrast" value="-37">
+                <input type="range" min="-200" max="200" value="-37" class="slider" id="contrastSlider">
+            </div>
+            <div class="filter">
+                <h3>Filter</h3>
+                <img src="../Assets/filter.png" alt="filter-icon">
+                <div class="tool-box">
+                    <img src="../Assets/big-arrow.png" alt="navigation-arrow">
+                    <img src="../Assets/filter-grid.png" alt="filters">
+                    <img class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow">
+                </div>
+            </div>
+            <div class="frame">
+                <h3>Filter</h3>
+                <img src="../Assets/frame.png" alt="frame-icon">
+                <div class="tool-box">
+                    <img src="../Assets/big-arrow.png" alt="navigation-arrow">
+                    <img src="../Assets/frame-grid.png" alt="filters">
+                    <img class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow">
+                </div>
+            </div>
         </div>
-        <div class="filters">filter och ramar</div>
-        <button class="save-button">SAVE</button>
     </section>
+    <button class="save-button">SAVE</button>
 </main>
 </body>
+
 </html>
