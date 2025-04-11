@@ -6,19 +6,35 @@
     <title>PhotoEditor</title>
     <link rel="stylesheet" href="photoeditor.css">
 </head>
-<header>Photo Editor</header>
+
 <body>
-<main>
+<header>
+    <h1>Photo Editor</h1>
+</header>
+<main class="container">
 
     <section class="left-panel">
-        <div class="picture-preview"></div>
-        <div><!--crop icon--></div>
-        <div class="file-manager-list"></div>
+        <h2>Vänster panel</h2>
+        <div class="picture-preview">bild</div>
+        <button class="crop-button">crop</button>
+        <div class="file-manager">
+            <ul class="file-list">
+                <li><label><input type="checkbox">fil1</label></li>
+                <li><label><input type="checkbox">fil2</label></li>
+                <li><label><input type="checkbox">fil3</label></li>
+            </ul>
+            <div class="fil-controls">
+                <button>REMOVE</button>
+                <button>ADD</button>
+            </div>
+        </div>
     </section>
 
     <section class="right-panel">
-        <div class="control-panel"></div>
-        <div><!--save button--></div>
+        <h2>Höger panel</h2>
+        <div class="tools">verktyg</div>
+        <div class="filters">filter och ramar</div>
+        <button class="save-button">SAVE</button>
     </section>
 </main>
 </body>
