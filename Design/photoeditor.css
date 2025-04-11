@@ -1,0 +1,21 @@
+html {
+ font-family: Inter sans-serif;
+}
+body {
+    width: 1440px;
+    height: 980px;
+    top: -180px;
+    left: -192px;
+    background-color: #000000;
+}
+.container {
+    display: flex;
+}
+.picture-preview-box {
+    display: compact;
+    width: 547px;
+    height: 297px;
+    top: 66px;
+    left: 46px;
+    color: #7F7F7F
+}

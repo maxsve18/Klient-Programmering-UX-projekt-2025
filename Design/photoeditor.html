@@ -15,9 +15,13 @@
 
     <section class="left-panel">
         <h2>Vänster panel</h2>
-        <div class="picture-preview">bild</div>
+        <div class="picture-preview-box">bild</div>
         <button class="crop-button">crop</button>
-        <div class="file-manager">
+        <div class="file-manager-box">
+            <div class="file-options">
+                <label><input type="checkbox">Select All</label>
+                <button class="show-as">Show as</button>
+            </div>
             <ul class="file-list">
                 <li><label><input type="checkbox">fil1</label></li>
                 <li><label><input type="checkbox">fil2</label></li>
@@ -32,7 +36,11 @@
 
     <section class="right-panel">
         <h2>Höger panel</h2>
-        <div class="tools">verktyg</div>
+        <div class="tools">
+            <h3>Resample</h3>
+            <img src="../Assets/info.png" alt="hover-info">
+            <div></div>
+        </div>
         <div class="filters">filter och ramar</div>
         <button class="save-button">SAVE</button>
     </section>
