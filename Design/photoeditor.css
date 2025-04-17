@@ -1,9 +1,12 @@
 html {
-    font-family: Inter sans-serif;
-    color: #9C9C9C;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
 }
 
 body {
+    color: #9C9C9C;
     padding: 30px;
     padding-top: 70px;
     align-self: center;
@@ -25,38 +28,6 @@ body {
     left: 46px;
 }
 
-.show-as-b {
-    position: relative;
-    top: 15px;
-    left: 100px;
-    width: 26px;
-    height: 26px;
-    background-color: white;
-}
-
-.show-as-p {
-    position: relative;
-    top: 13px;
-    left: 112px;
-    width: 26px;
-    height: 26px;
-}
-
-.checkbox {
-    position: relative;
-    width: 26px;
-    left: 10px;
-    background-color: white;
-    border-radius: 0;
-    cursor: pointer;
-}
-
-.select-all {
-    position: relative;
-    top: 5px;
-    padding-left: 15px;
-}
-
 #crop-icon {
     width: 96px;
     height: 45px;
@@ -65,35 +36,311 @@ body {
     left: 443px;
 }
 
-.file-manager-box {
-    display: flex;
-    flex-direction: row;
-    width: 520px;
-    height: 405px;
-    background-color: #1C1C13;
-}
-
-.scroll {
-    width: 26px;
-    height: 455px;
-    position: relative;
-    left: 522px;
-    bottom: 455px
-}
-
 .file-options {
     display: flex;
     color: white;
+    font-size: 15px;
+    font-weight: 100;
     background-color: #7F7F7F;
     width: 520px;
 }
+
+.file_options .checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.show-as-b {
+    position: relative;
+    top: 15px;
+    left: 70px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+}
+
+.select-all {
+    position: relative;
+    top: 3px;
+    left: 10px;
+    padding-left: 15px;
+}
+
+.select-all-checkbox {
+    position: relative;
+    appearance: none;
+    left: 20px;
+    bottom: -13px;
+    background-color: white;
+    width: 29px;
+    height: 25px;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.show-as-p {
+    position: relative;
+    top: 3px;
+    left: 80px;
+    height: 26px;
+}
+
+.file-manager-box {
+    width: 520px;
+    height: 420px;
+    background-color: #1C1C1C;
+    overflow-y: auto;
+    padding: 0;
+    position: relative;
+}
+
+.file-checkbox {
+    appearance: none;
+    width: 29px;
+    height: 25px;
+    background-color: #1C1C1C;
+    border: 1px solid #9C9C9C;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.file-list {
+    margin-left: -20px;
+    margin-bottom: 33px;
+}
+
+.file-list li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.file-placeholder {
+    display: inline-block;
+    width: 414px;
+    height: 25px;
+    background-color: #7F7F7F;
+    color: white;
+    font-size: 14px;
+}
+
+.file-controls {
+    margin-left: 286px;
+}
+
+.file-controls button {
+    width: 100px;
+    height: 30px;
+    margin-right: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll {
+    width: 25px;
+    height: 478px;
+    position: relative;
+    left: 522px;
+    bottom: 478px
+}
+
+/*------------------------------------------------------------------------------*/
 
 .right-panel {
     width: 770px;
     height: 798px;
     padding-top: 25px;
     padding-left: 25px;
-    background-color: #1C1C1C
+    background-color: #1C1C1C;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resample {
+    width: 500px;
+}
+
+.resample h3 {
+    margin-top: 20px;
+}
+
+.resample-dimensions {
+    border: #9C9C9C 1px solid;
+    width: 715px;
+    height: 62px;
+    margin-bottom: 20px;
+}
+
+.resample-input {
+    appearance: none;
+    background-color: #1C1C1C;
+    border: 1px solid #9C9C9C;
+    padding: 8px;
+    margin-top: 12px;
+    margin-right: 40px;
+    width: 70px;
+}
+
+.export {
+    width: 300px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+}
+
+.export h3 {
+    margin-bottom: 30px;
+}
+
+.image-format {
+    appearance: none;
+    color: #9C9C9C;
+    background-color: #1C1C1C;
+    border: 1px solid #9C9C9C;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer
+}
+
+.png-format {
+    appearance: none;
+    color: #9C9C9C;
+    background-color: white;
+    border: 1px solid #9C9C9C;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer
+}
+
+.resize {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 150px;
+}
+
+.resize h3 {
+    margin-bottom: 0px;
+}
+
+.resize-hover {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    bottom: 19px;
+    left: 63px;
+}
+
+.resize-drop {
+    background-color: #1C1C1C;
+    border: 1px solid #9C9C9C;
+    color: #9C9C9C;
+    width: 271px;
+    height: 52px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+filter, .frame {
+    position: absolute;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9C9C9C;
+}
+
+#filter-icon {
+    width: 26px;
+    height: 18.65px;
+}
+
+#filter-arrow1 {
+    width: 13px;
+    height: 43px;
+}
+
+#filter-arrow2{
+    width: 13px;
+    height: 43px;
+}
+
+#filter-grid {
+    width: 468px;
+    height: 52px;
+}
+
+.filter {
+    left: 643px;
+    top: 544px;
+    width: 200px;
+}
+
+.filter h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.filter-toolbox {
+    position: absolute;
+    width: 714px;
+    height: 100px;
+    top: 583px;
+    left: 642px;
+    border: 1px #9C9C9C;
+    gap: 10px;
+}
+
+.frame {
+    left: 643px;
+    top: 714px;
+    width: 200px;
+}
+
+.frame h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.frame-toolbox {
+    position: absolute;
+    width: 714px;
+    height: 68px;
+    top: 743px;
+    left: 642px;
+    border: 1px #9C9C9C;
+}
+
+#frame-icon {
+    width: 18px;
+    height: 18.13PX;
+}
+
+.tool-box {
+    display: flex;
+    border: 1px solid #9C9C9C;
+    padding-left: 20px;
+}
+
+.tool-box p {
+    margin-right: 150px;
+    margin-top: 18px;
+}
+
+.resample-hover {
+    width: 15px;
+    height: 15px;
+    margin-top: 24px;
+    margin-left: -5px;
 }
 
 .flip-icon {
@@ -108,7 +355,12 @@ body {
     height: 20px;
 }
 
+.flip-icon {
+    width: 20px;
+    height: 20px;
+}
 
-.tool-box {
-    border: 1px solid white;
+.rotate-icon {
+    width: 20px;
+    height: 20px;
 }

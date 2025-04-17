@@ -6,120 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhotoEditor</title>
     <link rel="stylesheet" href="photoeditor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main class="container">
+<main class="container">
 
-        <section class="left-panel">
-            <div class="picture-preview-box">
-                <img src="../Assets/image.png" alt="Image preview">
+    <section class="left-panel">
+        <div class="picture-preview-box">
+            <img src="../Assets/image.png" alt="Image preview">
+        </div>
+
+        <img id="crop-icon" src="../Assets/crop.png" alt="Crop Icon">
+
+        <div class="file-options">
+            <input type="checkbox" class="select-all-checkbox">
+            <p class="select-all">Select all</p>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 class="show-as-b">
+                <path d="M8 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 6H3.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 12H3.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 18H3.01" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+            <p class="show-as-p">Show as</p>
+        </div>
+
+        <div class="file-manager-box">
+            <ul class="file-list">
+                <li><label><input class="file-checkbox" type="checkbox" name="option1"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option2"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option3"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option4"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option5"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option6"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option7"><span
+                        class="file-placeholder"></span></label></li>
+                <li><label><input class="file-checkbox" type="checkbox" name="option8"><span
+                        class="file-placeholder"></span></label></li>
+            </ul>
+            <div class="file-controls">
+                <button>REMOVE</button>
+                <button>ADD</button>
             </div>
+        </div>
+        <img src="../Assets/slide.png" alt="scrollbar" class="scroll">
+    </section>
 
-            <img id="crop-icon" src="../Assets/crop.png" alt="Crop Icon">
-
-            <div class="file-options">
-                <input type="checkbox" class="checkbox">
-                <p class="select-all">Select all</p>
-                <img src="../Assets/menue-icon.png" alt="show as" class="show-as-b">
-                <p class="show-as-p">Show as</p>
-            </div>
-
-            <div class="file-manager-box">
-                <ul class="file-list">
-                    <li><label><input type="checkbox">fil1</label></li>
-                    <li><label><input type="checkbox">fil2</label></li>
-                    <li><label><input type="checkbox">fil3</label></li>
-                </ul>
-                <div class="fil-controls">
-                    <button>REMOVE</button>
-                    <button>ADD</button>
-                </div>
-            </div>
-            <img src="../Assets/slide.png" alt="scrollbar" class="scroll">
-        </section>
-
-        <section class="right-panel">
-            <div class="tools">
+    <section class="right-panel">
+        <div class="tools">
+            <div class="resample">
                 <h3>Resample</h3>
-                <img src="../Assets/info.png" alt="hover-info">
-                <div class="tool-box"> Image dimensions
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="resample-hover">
+                    <path d="M4.545 4.5C4.66255 4.16583 4.89458 3.88405 5.19998 3.70457C5.50538 3.52508 5.86445 3.45947 6.21359 3.51936C6.56273 3.57924 6.87941 3.76076 7.10754 4.03176C7.33567 4.30277 7.46053 4.64576 7.46 5C7.46 6 5.96 6.5 5.96 6.5M6 8.5H6.00549M11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z"
+                          stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="resample-dimensions"><p>Image dimensions</p>
                     <form action="#">
                         <label for="width">W</label>
-                        <input type="text" id="width" name="width">
+                        <input type="text" id="width" name="width" class="resample-input">
                         <label for="height">H</label>
-                        <input type="text" id="height" name="height">
+                        <input type="text" id="height" name="height" class="resample-input">
                     </form>
                 </div>
-                <div class="export">
-                    <h3>Export as</h3>
-                    <button class="JPEG-format">JPEG</button>
-                    <button class="PNG-format">PNG</button>
-                    <button class="PDF-format">PDF</button>
-                    <button class="TIFF-format">TIFF</button>
-                    <button class="RAW-format">RAW</button>
-                </div>
-                <div class="resize">
-                    <h3>Resize</h3>
-                    <img src="../Assets/info.png" alt="hover-info">
+            </div>
+            <div class="export">
+                <h3>Export as</h3>
+                <button class="image-format">JPEG</button>
+                <button class="png-format">PNG</button>
+                <button class="image-format">PDF</button>
+                <button class="image-format">TIFF</button>
+                <button class="image-format">RAW</button>
+            </div>
+            <div class="resize">
+                <h3>Resize</h3>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     class="resize-hover">
+                    <path d="M4.545 4.5C4.66255 4.16583 4.89458 3.88405 5.19998 3.70457C5.50538 3.52508 5.86445 3.45947 6.21359 3.51936C6.56273 3.57924 6.87941 3.76076 7.10754 4.03176C7.33567 4.30277 7.46053 4.64576 7.46 5C7.46 6 5.96 6.5 5.96 6.5M6 8.5H6.00549M11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z"
+                          stroke="#9C9C9C" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <select id="resize-drop" name="resize-drop" class="resize-drop">
+                    <option value="none">None</option>
+                    <option value="value-1">value-1</option>
+                    <option value="value-2">value-2</option>
+                    <option value="value-3">value-3</option>
+                    <option value="value-4">value-4</option>
+                </select>
+            </div>
+            <div class="rotate">
+                <h3>Rotate</h3>
+                <img src="../Assets/rotate.png" alt="rotate" class="flip-icon">
+                <button class="0deg">0&deg;</button>
+                <button class="90deg">90&deg;</button>
+                <button class="180deg">180&deg;</button>
+                <button class="270deg">270&deg;</button>
+                <br>
+                <img src="../Assets/rotate.png" alt="rotate" class="rotate-icon">
+                <button class="0deg">0&deg;</button>
+                <button class="-90deg">-90&deg;</button>
+                <button class="-180deg">-180&deg;</button>
+                <button class="-270deg">-270&deg;</button>
+            </div>
+            <div class="flip">
+                <h3>Flip</h3>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.7709 16.6667H18.3334L17.5525 15M13.6459 16.6667H12.0834V15M12.0834 9.99999V11.6667M15.2084 9.99999L15.99 11.6667M13.6459 6.66666L12.0834 3.33333V6.66666M7.91669 16.6667H1.66669L7.91669 3.33333V16.6667Z"
+                          stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
 
-                    <select id="resize-drop" name="resize-drop">
-                        <option value="none">None</option>
-                        <option value="value-1">value-1</option>
-                        <option value="value-2">value-2</option>
-                        <option value="value-3">value-3</option>
-                        <option value="value-4">value-4</option>
-                    </select>
-                </div>
-                <div class="rotate">
-                    <h3>Rotate</h3>
-                    <img src="../Assets/rotate.png" alt="rotate" class="flip-icon">
-                    <button class="0deg">0&deg;</button>
-                    <button class="90deg">90&deg;</button>
-                    <button class="180deg">180&deg;</button>
-                    <button class="270deg">270&deg;</button>
-                    <br>
-                    <img src="../Assets/rotate.png" alt="rotate">
-                    <button class="0deg">0&deg;</button>
-                    <button class="-90deg">-90&deg;</button>
-                    <button class="-180deg">-180&deg;</button>
-                    <button class="-270deg">-270&deg;</button>
-                </div>
-                <div class="flip">
-                    <h3>Flip</h3>
-                    <img src="../Assets/flip.png" alt="flip horizontally">
-                    <button class="horizontally">Horizontally</button>
-                    <img src="../Assets/flip.png" alt="flip vertically" class="flip-vert">
-                    <button class="vertically">Vertically</button>
-                </div>
-                <div class="contrast">
-                    <h3>Contrast</h3>
-                    <img src="../Assets/contrast.png" alt="contrast">
-                    <input type="text" id="value" name="contrast" value="-37">
-                    <input type="range" min="-200" max="200" value="-37" class="slider" id="contrastSlider">
-                </div>
-                <div class="filter">
-                    <h3>Filter</h3>
-                    <img src="../Assets/filter.png" alt="filter-icon">
-                    <div class="tool-box">
-                        <img src="../Assets/big-arrow.png" alt="navigation-arrow">
-                        <img src="../Assets/filter-grid.png" alt="filters">
-                        <img class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow">
-                    </div>
-                </div>
-                <div class="frame">
-                    <h3>Filter</h3>
-                    <img src="../Assets/frame.png" alt="frame-icon">
-                    <div class="tool-box">
-                        <img src="../Assets/big-arrow.png" alt="navigation-arrow">
-                        <img src="../Assets/frame-grid.png" alt="filters">
-                        <img class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow">
-                    </div>
+                <button class="horizontally">Horizontally</button>
+                <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.7709 21.3333H18.3334L17.5525 23M13.6459 21.3333H12.0834V23M12.0834 28V26.3333M15.2084 28L15.99 26.3333M13.6459 31.3333L12.0834 34.6667V31.3333M7.91669 21.3333H1.66669L7.91669 34.6667V21.3333Z"
+                          stroke="#B3B3B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.854 3.85401C11.8076 3.90057 11.7524 3.93751 11.6917 3.96272C11.6309 3.98793 11.5658 4.0009 11.5 4.0009C11.4343 4.0009 11.3691 3.98793 11.3084 3.96272C11.2476 3.93751 11.1925 3.90057 11.146 3.85401L10 2.70701L10 6.50001C10 6.63262 9.94734 6.75979 9.85357 6.85356C9.75981 6.94733 9.63263 7.00001 9.50002 7.00001C9.36741 7.00001 9.24024 6.94733 9.14647 6.85356C9.0527 6.75979 9.00002 6.63262 9.00002 6.50001L9.00002 2.70701L7.85402 3.85401C7.76014 3.9479 7.6328 4.00064 7.50002 4.00064C7.36725 4.00064 7.23991 3.9479 7.14602 3.85401C7.05213 3.76012 6.99939 3.63278 6.99939 3.50001C6.99939 3.36723 7.05213 3.2399 7.14602 3.14601L9.14602 1.14601C9.19247 1.09945 9.24764 1.0625 9.30839 1.0373C9.36913 1.01209 9.43425 0.999115 9.50002 0.999115C9.56579 0.999115 9.63091 1.01209 9.69166 1.0373C9.7524 1.0625 9.80758 1.09945 9.85402 1.14601L11.854 3.14601C11.9006 3.19245 11.9375 3.24763 11.9627 3.30838C11.9879 3.36912 12.0009 3.43424 12.0009 3.50001C12.0009 3.56578 11.9879 3.6309 11.9627 3.69164C11.9375 3.75239 11.9006 3.80756 11.854 3.85401ZM11.854 12.146C11.9006 12.1925 11.9375 12.2476 11.9627 12.3084C11.9879 12.3691 12.0009 12.4342 12.0009 12.5C12.0009 12.5658 11.9879 12.6309 11.9627 12.6916C11.9375 12.7524 11.9006 12.8076 11.854 12.854L9.85402 14.854C9.80758 14.9006 9.7524 14.9375 9.69166 14.9627C9.63091 14.9879 9.56579 15.0009 9.50002 15.0009C9.43425 15.0009 9.36913 14.9879 9.30839 14.9627C9.24764 14.9375 9.19247 14.9006 9.14602 14.854L7.14602 12.854C7.05213 12.7601 6.99939 12.6328 6.99939 12.5C6.99939 12.3672 7.05213 12.2399 7.14602 12.146C7.23991 12.0521 7.36725 11.9994 7.50002 11.9994C7.6328 11.9994 7.76013 12.0521 7.85402 12.146L9.00002 13.293L9.00002 9.50001C9.00002 9.3674 9.0527 9.24022 9.14647 9.14645C9.24024 9.05269 9.36741 9.00001 9.50002 9.00001C9.63263 9.00001 9.75981 9.05269 9.85357 9.14645C9.94734 9.24022 10 9.3674 10 9.50001L10 13.293L11.146 12.146C11.1925 12.0994 11.2476 12.0625 11.3084 12.0373C11.3691 12.0121 11.4343 11.9991 11.5 11.9991C11.5658 11.9991 11.6309 12.0121 11.6917 12.0373C11.7524 12.0625 11.8076 12.0994 11.854 12.146Z"
+                          fill="#B3B3B3"/>
+                </svg>
+
+
+                <button class="vertically">Vertically</button>
+            </div>
+            <div class="contrast">
+                <h3>Contrast</h3>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 1.66667C5.39752 1.66667 1.66669 5.39751 1.66669 10C1.66669 14.6025 5.39752 18.3333 10 18.3333V1.66667Z"
+                          stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 1.66667C14.6025 1.66667 18.3333 5.39751 18.3333 10C18.3333 14.6025 14.6025 18.3333 10 18.3333V1.66667Z"
+                          stroke="#B3B3B3" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M10 15H3.75004M10 11.6667H2.08337M10 8.33333H2.08337M10 5H3.75004" stroke="#B3B3B3"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+
+                <input type="text" id="value" name="contrast" value="-37">
+                <input type="range" min="-200" max="200" value="-37" class="slider" id="contrastSlider">
+            </div>
+            <div class="filter">
+                <h3>Filter</h3>
+                <img id="filter-icon" src="../Assets/filter.png" alt="Filter Icon">
+                <div class="filter-toolbox">
+                    <img id="filter-arrow1" src="../Assets/big-arrow.png" alt="navigation-arrow1">
+                    <img id="filter-grid" src="../Assets/filter-grid.png" alt="filters">
+                    <img id="filter-arrow2" class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow2">
                 </div>
             </div>
-        </section>
-        <button class="save-button">SAVE</button>
-    </main>
+            <div class="frame">
+                <h3>Frame</h3>
+                <img id="frame-icon" src="../Assets/frame.png" alt="Frame Icon">
+                <div class="frame-toolbox">
+                    <img src="../Assets/big-arrow.png" alt="navigation-arrow">
+                    <img src="../Assets/frame-grid.png" alt="filters">
+                    <img class="flip-icon" src="../Assets/big-arrow.png" alt="navigation-arrow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="save-button">SAVE</button>
+</main>
 </body>
 
 </html>
